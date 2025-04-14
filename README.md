@@ -7,7 +7,7 @@ A collection of React hooks for working with the Web Audio API.
 ## Installation
 
 ```bash
-npm install @hey-lee/web-audio-hooks
+npm install web-audio-hooks
 ```
 
 ## Usage
