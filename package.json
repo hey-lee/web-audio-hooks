@@ -1,7 +1,7 @@
 {
   "name": "web-audio-hooks",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "A collection of React hooks for working with the Web Audio API.",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs",
@@ -27,7 +27,7 @@
     "splitting": false
   },
   "exports": {
-    "react": {
+    "./react": {
       "import": {
         "types": "./dist/react/index.d.ts",
         "default": "./dist/react/index.js"
