@@ -1,0 +1,73 @@
+{
+  "name": "web-audio-hooks",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "test": "vitest"
+  },
+  "tsup": {
+    "target": "es5",
+    "entry": {
+      "react/index": "src/react/index.ts"
+    },
+    "format": [
+      "esm",
+      "cjs"
+    ],
+    "dts": true,
+    "clean": true,
+    "sourcemap": true,
+    "splitting": false
+  },
+  "exports": {
+    "react": {
+      "import": {
+        "types": "./dist/react/index.d.ts",
+        "default": "./dist/react/index.js"
+      },
+      "require": {
+        "types": "./dist/react/index.d.cts",
+        "default": "./dist/react/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "web",
+    "audio",
+    "vue",
+    "react",
+    "hooks",
+    "browser"
+  ],
+  "author": "DBL <me@banli.co>",
+  "homepage": "https://github.com/hey-lee/web-audio-hooks",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hey-lee/web-audio-hooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hey-lee/web-audio-hooks/issues"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.5.7",
+    "@types/react": "^19.1.1",
+    "react": "^19.1.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.1.1"
+  },
+  "peerDependencies": {
+    "react": "^19.1.0"
+  }
+}
